@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/zamanqasimi/static/css/main.b1148117.css",
-    "main.js": "/zamanqasimi/static/js/main.56dbe893.js",
+    "main.css": "/zamanqasimi/static/css/main.2b5e51d1.css",
+    "main.js": "/zamanqasimi/static/js/main.70ac4d14.js",
     "static/media/13.png": "/zamanqasimi/static/media/13.3af1aea375a08b5a601e.png",
     "static/media/8.png": "/zamanqasimi/static/media/8.b9a87a5c6b603662d63e.png",
     "static/media/3.png": "/zamanqasimi/static/media/3.a4f9723c61549fca0a30.png",
@@ -57,11 +57,11 @@
     "static/media/icon-twitter.svg": "/zamanqasimi/static/media/icon-twitter.9b8ad9549258d127513619b5d484a642.svg",
     "static/media/icon-facebook.svg": "/zamanqasimi/static/media/icon-facebook.c8352fbb1ba3b29020209d03ba66a1a3.svg",
     "static/media/downarrow.svg": "/zamanqasimi/static/media/downarrow.5d8e4c0135b17eb4a784fa1476ebec29.svg",
-    "main.b1148117.css.map": "/zamanqasimi/static/css/main.b1148117.css.map",
-    "main.56dbe893.js.map": "/zamanqasimi/static/js/main.56dbe893.js.map"
+    "main.2b5e51d1.css.map": "/zamanqasimi/static/css/main.2b5e51d1.css.map",
+    "main.70ac4d14.js.map": "/zamanqasimi/static/js/main.70ac4d14.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1148117.css",
-    "static/js/main.56dbe893.js"
+    "static/css/main.2b5e51d1.css",
+    "static/js/main.70ac4d14.js"
   ]
 }
