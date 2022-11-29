@@ -498,8 +498,16 @@ html {
                         display: flex;
                         gap: 30px;
 
-                        img {
+                        svg {
                             width: 35px;
+                            path{
+                                transition: fill 300ms ease-in-out;
+                            }
+                            &:hover{
+                                path{
+                                    fill: rgb(15, 139, 131);
+                                }
+                            }
                         }
                     }
                 }
@@ -724,7 +732,7 @@ html {
                     .follow{
                         .social-icons{
                             a{
-                                img:hover{
+                                svg:hover{
                                     color: rgb(15, 139, 131);
                                 }
                             }

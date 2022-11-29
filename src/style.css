@@ -457,8 +457,14 @@ html {
   display: flex;
   gap: 30px;
 }
-.container main .contact .contactInfo .follow .social-icons img {
+.container main .contact .contactInfo .follow .social-icons svg {
   width: 35px;
+}
+.container main .contact .contactInfo .follow .social-icons svg path {
+  transition: fill 300ms ease-in-out;
+}
+.container main .contact .contactInfo .follow .social-icons svg:hover path {
+  fill: rgb(15, 139, 131);
 }
 .container footer {
   width: 100%;
@@ -636,7 +642,7 @@ html {
     display: flex;
     align-items: flex-start;
   }
-  .container main .contact .contactInfo .follow .social-icons a img:hover {
+  .container main .contact .contactInfo .follow .social-icons a svg:hover {
     color: rgb(15, 139, 131);
   }
   .container footer {
