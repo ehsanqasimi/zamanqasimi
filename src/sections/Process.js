@@ -8,7 +8,7 @@ function Process() {
         <div id="process" className="process">
             <p className="our">OUR PROCESS</p>
             <div className="cards">
-                <div className="card">
+                <div data-animate="animate__bounceInRight" className="card animate__animated observe">
                     <p className="card-title"><span>1</span> MEASURE & QUOTE</p>
                     <p className="card-body">Crystal Bathrooms will provide you with a quote.
                         Along with a quote our experts will provide you
@@ -19,7 +19,7 @@ function Process() {
                         perfectly complement your home.</p>
                     <img className="card-image" src={firstImage } alt="image of tiles" />
                 </div>
-                <div className="card">
+                <div data-animate="animate__bounceInRight" className="card animate__animated observe">
                     <p className="card-title"><span>2</span> MEASURE & QUOTE</p>
                     <p className="card-body">Crystal Bathrooms will provide you with a quote.
                         Along with a quote our experts will provide you
@@ -30,7 +30,7 @@ function Process() {
                         perfectly complement your home.</p>
                     <img className="card-image" src={ secondImage} alt="image of tiles" />
                 </div>
-                <div className="card">
+                <div data-animate="animate__bounceInRight" className="card animate__animated observe">
                     <p className="card-title"><span>3</span> MEASURE & QUOTE</p>
                     <p className="card-body">Crystal Bathrooms will provide you with a quote.
                         Along with a quote our experts will provide you

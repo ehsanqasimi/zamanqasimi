@@ -16,14 +16,14 @@ function About() {
                     customer service has made us one of the most trusted
                     names in the business.
                 </p>
-                <div className="about-content-button">
+                <div data-animate="animate__bounceIn" className="about-content-button animate__animated observe">
                     <a href="#contact" >Book a Free Quote</a>
 
                 </div>
             </div>
             <div className="about-images">
-                <img className='about-image-small' src={smallImage} alt="a small image of tile" />
-                <img className='about-image-big' src={bigImage} alt="a big image of tile" />
+                <img data-animate="animate__zoomIn" className='about-image-small animate__animated observe' src={smallImage} alt="a small image of tile" />
+                <img data-animate="animate__bounceInRight" className='about-image-big animate__animated observe' src={bigImage} alt="a big image of tile" />
             </div>
         </div>
     )

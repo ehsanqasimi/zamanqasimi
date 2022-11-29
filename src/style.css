@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .container {
@@ -16,6 +18,7 @@ html {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  font-family: "Open Sans", sans-serif;
 }
 .container .home {
   height: 100vh;
@@ -50,7 +53,7 @@ html {
 .container .home .home-content img:hover {
   scale: 1.3;
 }
-.container .home .home-content ::before {
+.container .home .home-content::before {
   content: "";
   width: 100%;
   height: 100vh;
@@ -58,7 +61,7 @@ html {
   z-index: -1;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.37);
+  background-color: rgba(0, 0, 0, 0.196);
 }
 @-webkit-keyframes downArrowAnimation {
   0% {
@@ -102,6 +105,7 @@ html {
   padding: 30px;
   padding-inline: 60px;
   background-color: white;
+  z-index: 10;
 }
 .container main .nav .logo {
   width: 50px;
@@ -226,6 +230,10 @@ html {
   width: -moz-max-content;
   width: max-content;
   padding: 10px 30px;
+  opacity: 0;
+}
+.container main .about .about-content .about-content-button.animated__bounceIn {
+  opacity: 1;
 }
 .container main .about .about-content .about-content-button a {
   color: white;
@@ -233,6 +241,17 @@ html {
 .container main .about .about-images {
   width: 100%;
   position: relative;
+}
+.container main .about .about-images img {
+  opacity: 0;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+.container main .about .about-images img.animate__zoomIn {
+  opacity: 1;
+}
+.container main .about .about-images img.animate__bounceInRight {
+  opacity: 1;
 }
 .container main .about .about-images .about-image-small {
   width: 50%;
@@ -247,6 +266,43 @@ html {
   width: 80%;
   position: relative;
   z-index: -3;
+}
+.container main .gallery-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.container main .gallery-section .gallery {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  gap: 1px;
+}
+.container main .gallery-section .gallery img {
+  height: 200px;
+  width: 200px;
+  min-width: 200px;
+  max-width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  transition: scale 500ms ease-in-out;
+}
+.container main .gallery-section .gallery img:hover {
+  scale: 1.1;
+  z-index: 2;
+}
+.container main .gallery-section .gallery img {
+  opacity: 0;
+}
+.container main .gallery-section .gallery img.animate__fadeInUp {
+  opacity: 1;
 }
 .container main .process {
   width: 100%;
@@ -274,6 +330,16 @@ html {
   color: #320E85;
 }
 .container main .process .cards .card {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  opacity: 0;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+.container main .process .cards .card.animate__bounceInRight {
+  opacity: 1;
+}
+.container main .process .cards .card {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -283,7 +349,7 @@ html {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding-inline: 20px;
+  padding-inline: 40px;
   font-size: 26px;
   font-weight: 600;
 }
@@ -294,7 +360,8 @@ html {
 .container main .process .cards .card .card-body {
   font-size: 17px;
   font-weight: 600;
-  padding-inline: 20px;
+  padding-inline: 40px;
+  padding-bottom: 20px;
 }
 .container main .process .cards .card .card-image {
   height: 200px;
@@ -459,9 +526,23 @@ html {
     gap: 70px;
     background-color: transparent;
   }
+  .container main .nav .links .active {
+    border-bottom: 4px solid rgb(15, 139, 131);
+  }
+  .container main .nav .links .active a {
+    color: rgb(15, 139, 131);
+  }
   .container main .nav .links li a {
     font-size: 30px;
     color: #180051;
+    transition: 0.3s;
+  }
+  .container main .nav .links li:hover {
+    border-bottom-color: rgb(15, 139, 131);
+  }
+  .container main .nav .links li:hover a {
+    opacity: 0.9;
+    color: rgb(15, 139, 131);
   }
   .container main .nav .links .free-qoute {
     display: none;
@@ -517,6 +598,18 @@ html {
   .container main .process .cards {
     flex-direction: row;
   }
+  .container main .process .cards .card:nth-child(1) {
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+  }
+  .container main .process .cards .card:nth-child(2) {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+  }
+  .container main .process .cards .card:nth-child(3) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
   .container main .contact {
     flex-direction: row;
     justify-content: space-between;
@@ -542,6 +635,9 @@ html {
     justify-content: center;
     display: flex;
     align-items: flex-start;
+  }
+  .container main .contact .contactInfo .follow .social-icons a img:hover {
+    color: rgb(15, 139, 131);
   }
   .container footer {
     flex-direction: row;

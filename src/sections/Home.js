@@ -123,8 +123,8 @@ function Home() {
                 }
             </div>
             <div className="home-content">
-                <h1 className='home-content-header'>
-                    Make your home look nice with us
+                <h1 className='home-content-header animate__animated animate__backInRight'>
+                        Make your home look nice with us
                 </h1>
                 <a href="#about"><img src={DownArrow} alt="down arrow" /></a> 
             </div>

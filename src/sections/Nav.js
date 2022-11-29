@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from './images/logo.svg'
+import Scrollspy from 'react-scrollspy'
 
 
 function Nav() {
@@ -14,6 +15,7 @@ function Nav() {
     }
 
 
+
     return (
         <nav className={`nav ${isOpen ? 'show' :''}`}>
             <div className="logo">
@@ -21,13 +23,18 @@ function Nav() {
                     <img src={logo} alt="logo" />
                 </a>
             </div>
-            <ul className="links">
-                <li onClick={close}><a href="#home">Home</a></li>
-                <li onClick={close}><a href="#about">About</a></li>
-                <li onClick={close}><a href="#process">Process</a></li>
-                <li onClick={close}><a href="#contact">Contact</a></li>
-                <li onClick={close} className="free-qoute"><a href="#contact">Book your free Quote</a> </li>
-            </ul>
+            
+                <Scrollspy
+                className='links'
+                items={['home', 'about', 'process', 'contact']}
+            currentClassName={"active"}>
+                    <li onClick={close}><a href="#home">Home</a></li>
+                    <li onClick={close}><a href="#about">About</a></li>
+                    <li onClick={close}><a href="#process">Process</a></li>
+                    <li onClick={close}><a href="#contact">Contact</a></li>
+                    <li onClick={close} className="free-qoute"><a href="#contact">Book your free Quote</a> </li>
+                </Scrollspy>
+            
             <div onClick={toggle} className="burger">
                 <span></span>
                 <span></span>

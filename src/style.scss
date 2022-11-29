@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+
+
 $purple: #320E85;
 $darkPurple: #180051;
 $white: #fff;
@@ -11,13 +14,15 @@ $white: #fff;
     list-style: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .container {
     width: 100%;
     height: max-content;
+    font-family: 'Open Sans' , sans-serif;
 
     .home {
         height: 100vh;
@@ -54,7 +59,7 @@ html{
                 }
             }
 
-            ::before {
+            &::before {
                 content: '';
                 width: 100%;
                 height: 100vh;
@@ -62,7 +67,7 @@ html{
                 z-index: -1;
                 left: 0;
                 top: 0;
-                background-color: rgba(0, 0, 0, 0.37);
+                background-color: rgba(0, 0, 0, 0.196);
             }
 
             @keyframes downArrowAnimation {
@@ -104,6 +109,8 @@ html{
             padding: 30px;
             padding-inline: 60px;
             background-color: white;
+            z-index: 10;
+
             .logo {
                 width: 50px;
 
@@ -240,6 +247,11 @@ html{
                     border-radius: 2px;
                     width: max-content;
                     padding: 10px 30px;
+                    opacity: 0;
+
+                    &.animated__bounceIn {
+                        opacity: 1;
+                    }
 
                     a {
                         color: white;
@@ -250,6 +262,19 @@ html{
             .about-images {
                 width: 100%;
                 position: relative;
+
+                img {
+                    opacity: 0;
+                    animation-duration: 2s;
+                }
+
+                img.animate__zoomIn {
+                    opacity: 1;
+                }
+
+                img.animate__bounceInRight {
+                    opacity: 1;
+                }
 
                 .about-image-small {
                     width: 50%;
@@ -265,6 +290,40 @@ html{
                     width: 80%;
                     position: relative;
                     z-index: -3;
+                }
+            }
+        }
+        .gallery-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            .gallery{
+                width: 100%;
+                display: flex;
+                flex-flow: wrap;
+                align-items: center;
+                justify-content: center;
+                height: max-content;
+                 gap: 1px;
+                img{
+                    height: 200px;
+                    width: 200px;
+                    min-width: 200px;
+                    max-width: 300px;
+                    object-fit: cover;
+                    cursor: pointer;
+                    transition: scale 500ms ease-in-out;
+                    &:hover{
+                        scale: 1.1;
+                        z-index: 2;
+                    }
+                }
+                img{
+                    opacity: 0;
+                }
+                img.animate__fadeInUp{
+                    opacity: 1;
                 }
             }
         }
@@ -294,6 +353,17 @@ html{
                 color: #320E85;
 
                 .card {
+                    animation-duration: 1.5s;
+                    opacity: 0;
+                    animation-delay: 0;
+                }
+
+                .card.animate__bounceInRight {
+
+                    opacity: 1;
+                }
+
+                .card {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
@@ -303,7 +373,7 @@ html{
                         display: flex;
                         align-items: center;
                         gap: 20px;
-                        padding-inline: 20px;
+                        padding-inline: 40px;
 
                         span {
                             font-size: 80px;
@@ -317,7 +387,8 @@ html{
                     .card-body {
                         font-size: 17px;
                         font-weight: 600;
-                        padding-inline: 20px;
+                        padding-inline: 40px;
+                        padding-bottom: 20px;
                     }
 
                     .card-image {
@@ -484,9 +555,9 @@ html{
     .container {
         .home {
             .home-slider-container {
-                img{
+                img {
                     height: 115vh;
-                    
+
                 }
             }
         }
@@ -494,13 +565,16 @@ html{
         main {
             .nav {
                 padding-inline: 100px;
-                .logo{
+
+                .logo {
                     width: 80px;
-                    img{
+
+                    img {
                         width: 100%;
                     }
                 }
-                .links{
+
+                .links {
                     position: static;
                     height: max-content;
                     width: max-content;
@@ -510,17 +584,35 @@ html{
                     flex-direction: row;
                     gap: 70px;
                     background-color: transparent;
-                    li{
+                    .active{
+                        border-bottom: 4px solid rgb(15, 139, 131);
                         a{
-                            font-size: 30px;
-                            color: $darkPurple;
+                            color: rgb(15, 139, 131);
+
                         }
                     }
-                    .free-qoute{
+                    li {
+                        a {
+                            font-size: 30px;
+                            color: $darkPurple;
+                            transition: .3s;
+                        }
+                        &:hover{
+                            a{
+                                opacity: 0.9;
+                                color: rgb(15, 139, 131);
+                            }
+                            border-bottom-color: rgb(15, 139, 131);
+                        }
+
+                    }
+
+                    .free-qoute {
                         display: none;
                     }
                 }
-                .burger{
+
+                .burger {
                     display: none;
                 }
             }
@@ -582,6 +674,20 @@ html{
 
                 .cards {
                     flex-direction: row;
+
+                    .card {
+                        &:nth-child(1) {
+                            animation-delay: 0;
+                        }
+
+                        &:nth-child(2) {
+                            animation-delay: 0.5s;
+                        }
+
+                        &:nth-child(3) {
+                            animation-delay: 1s;
+                        }
+                    }
                 }
             }
 
@@ -593,6 +699,7 @@ html{
                 padding-inline: 100px;
                 padding-block: 150px;
                 gap: 150px;
+
                 .form {
                     width: 50%;
 
@@ -614,6 +721,15 @@ html{
                     justify-content: center;
                     display: flex;
                     align-items: flex-start;
+                    .follow{
+                        .social-icons{
+                            a{
+                                img:hover{
+                                    color: rgb(15, 139, 131);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

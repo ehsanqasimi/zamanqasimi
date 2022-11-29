@@ -30,7 +30,9 @@ function Contact() {
 
                     <p>And follow Us on:</p>
                     <div className="social-icons">
-                        <a target='_blank' href="https://www.facebook.com/zaman.qasimi.92?mibextid=LQQJ4d"><img src={facebookIcon} alt="facebook icon" /></a>
+                        <a target='_blank' href="https://www.facebook.com/zaman.qasimi.92?mibextid=LQQJ4d">
+                            <img src={facebookIcon} alt="facebook icon" />
+                        </a>
                         <a target='_blank' href="https://instagram.com/virgin_wolf7?igshid=YmMyMTA2M2Y="><img src={instagramIcon} alt="instagram icon" /></a>
                         <a target='_blank' href="https://twitter.com"><img src={twitterIcon} alt="twitter icon" /></a>
                     </div>
