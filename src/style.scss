@@ -5,6 +5,10 @@ $purple: #320E85;
 $darkPurple: #180051;
 $white: #fff;
 
+img {
+    border-radius: 5px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +26,7 @@ html {
 .container {
     width: 100%;
     height: max-content;
-    font-family: 'Open Sans' , sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
     .home {
         height: 100vh;
@@ -293,36 +297,41 @@ html {
                 }
             }
         }
-        .gallery-section{
+
+        .gallery-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 30px;
-            .gallery{
+            padding-bottom: 100px;
+            .gallery {
                 width: 100%;
                 display: flex;
                 flex-flow: wrap;
                 align-items: center;
                 justify-content: center;
                 height: max-content;
-                 gap: 1px;
-                img{
+                gap: 1px;
+
+                img {
                     height: 200px;
                     width: 200px;
                     min-width: 200px;
                     max-width: 300px;
                     object-fit: cover;
                     cursor: pointer;
-                    transition: scale 500ms ease-in-out;
-                    &:hover{
-                        scale: 1.1;
-                        z-index: 2;
+                    transition: scale 200ms linear;
+
+                    &:hover {
+                        scale: 1;
                     }
                 }
-                img{
+
+                img {
                     opacity: 0;
                 }
-                img.animate__fadeInUp{
+
+                img.animate__fadeInUp {
                     opacity: 1;
                 }
             }
@@ -364,6 +373,7 @@ html {
                 }
 
                 .card {
+                    border-radius: 10px;
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
@@ -395,6 +405,7 @@ html {
                         height: 200px;
                         object-fit: cover;
                         width: 100%;
+                        border-radius: 0 0 10px 10px;
                     }
                 }
             }
@@ -500,11 +511,13 @@ html {
 
                         svg {
                             width: 35px;
-                            path{
+
+                            path {
                                 transition: fill 300ms ease-in-out;
                             }
-                            &:hover{
-                                path{
+
+                            &:hover {
+                                path {
                                     fill: rgb(15, 139, 131);
                                 }
                             }
@@ -592,24 +605,29 @@ html {
                     flex-direction: row;
                     gap: 70px;
                     background-color: transparent;
-                    .active{
+
+                    .active {
                         border-bottom: 4px solid rgb(15, 139, 131);
-                        a{
+
+                        a {
                             color: rgb(15, 139, 131);
 
                         }
                     }
+
                     li {
                         a {
                             font-size: 30px;
                             color: $darkPurple;
                             transition: .3s;
                         }
-                        &:hover{
-                            a{
+
+                        &:hover {
+                            a {
                                 opacity: 0.9;
                                 color: rgb(15, 139, 131);
                             }
+
                             border-bottom-color: rgb(15, 139, 131);
                         }
 
@@ -650,14 +668,16 @@ html {
                         font-size: 20px;
                         transition: all 400ms ease-in-out;
                         cursor: pointer;
+                        border-radius: 5px;
 
                         a {
+                            transition: color 400ms ease-in-out;
                             color: white;
                         }
 
                         &:hover {
                             background-color: white;
-                            border: 2px solid $purple;
+                            outline: 2px solid $purple;
 
                             a {
                                 color: $darkPurple;
@@ -670,8 +690,23 @@ html {
                     width: 100%;
                     flex-grow: 1;
 
+                    img {
+                        border-radius: 10px;
+                    }
+
                     .about-image-small {
                         top: 50%;
+                    }
+                }
+            }
+
+            .gallery-section {
+                .gallery {
+                    img {
+                        &:hover {
+                            scale: 1.1;
+                            z-index: 2;
+                        }
                     }
                 }
             }
@@ -729,10 +764,11 @@ html {
                     justify-content: center;
                     display: flex;
                     align-items: flex-start;
-                    .follow{
-                        .social-icons{
-                            a{
-                                svg:hover{
+
+                    .follow {
+                        .social-icons {
+                            a {
+                                svg:hover {
                                     color: rgb(15, 139, 131);
                                 }
                             }
